@@ -1,0 +1,29 @@
+<template>
+  <section id="welcome" class="hide-overflow">
+    <v-layout>
+      <v-flex hidden-sm-and-down md6>
+        <v-img src="/plant.jpg" height="100vh" />
+      </v-flex>
+      <v-flex xs12 md6 align-center layout :pa-5="$vuetify.breakpoint.smAndDown" wrap>
+        <v-layout align-content-space-between justify-center>
+          <v-flex xs10 md6>
+            <v-subheader>Welcome!</v-subheader>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur ad
+              ipiscin elit. Etiam vulputate augue vel felis gra
+              vida porta. Lorem ipsum dolor sit amet, cons
+              ectetur adipiscing elit.<br>
+              Lorem ipsum dolor sit amet, consectetur ad
+              ipiscin elit. Etiam vulputate augue vel felis gra
+              vida porta. Lorem ipsum dolor sit amet, cons
+              ectetur adipiscing elit.
+            </p>
+            <p>
+              Products and things can go in these spaces
+            </p>
+          </v-flex>
+        </v-layout>
+      </v-flex>
+    </v-layout>
+  </section>
+</template>
