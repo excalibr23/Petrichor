@@ -3,7 +3,7 @@
     <v-layout>
       <v-flex xs12 md6 primary text-xs-center pa-5 white--text>
         <v-subheader>
-          Recent Projects
+          Spring Products
         </v-subheader>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipi<br>

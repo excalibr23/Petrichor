@@ -3,6 +3,13 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'spa',
+  env: {
+    cockpit: {
+      apiUrl: 'http://localhost:8080/api',
+      apiToken: 'e824b6b33db6dd39099db480d1033b',
+      baseUrl: 'http://localhost:8080'
+    }
+  },
 
   /*
   ** Headers of the page
@@ -23,7 +30,8 @@ module.exports = {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      }
+      },
+      { rel: 'stylesheet', href:'https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css'},
     ]
   },
 

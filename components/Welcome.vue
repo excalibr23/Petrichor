@@ -5,7 +5,7 @@
         <v-img src="/plant.jpg" height="100vh" />
       </v-flex>
       <v-flex xs12 md6 align-center layout :pa-5="$vuetify.breakpoint.smAndDown" wrap>
-        <v-layout align-content-space-between justify-center>
+        <v-layout align-center justify-center>
           <v-flex xs10 md6>
             <v-subheader>Welcome!</v-subheader>
             <p>

@@ -63,8 +63,8 @@
     <div class="rain front-row" v-html="drops" />
     <!-- eslint-disable-next-line -->
     <div class="rain back-row" v-html="backDrops" />
-    <nuxt />
     <!--RAIN CODE END-->
+    <nuxt />
     <v-navigation-drawer
       v-model="rightDrawer"
       :right="right"
@@ -82,12 +82,12 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>&copy; 2019</span>
+    <v-footer id="footer" height="88px">
+      <v-spacer />
+      <span>Copyright Petrichor Boutique &copy; 2019</span>
     </v-footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js" />
+    <script id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="NWFjYzQ3ZDgtYWNiZS00M2Y4LWE0NjItMzg5MjViZDY1MmY5NjM2ODQ5NzMwMjI2Mzc5Njc3" />
   </v-app>
 </template>
 
@@ -159,12 +159,11 @@ html {
 body {
   height: 100%;
   margin: 0;
-  overflow: hidden;
   background: linear-gradient(to bottom, #202020, #111119);
 }
 
 .rain {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
   height: 100%;
@@ -317,5 +316,9 @@ body.single-toggle .drop {
 
 body.single-toggle .drop:nth-child(10) {
   display: block;
+}
+
+#footer{
+  padding-right: 10px;
 }
 </style>
