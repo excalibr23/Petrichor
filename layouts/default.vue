@@ -1,20 +1,8 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
+    <!--<v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
       <v-list>
-        <v-list-tile
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
+        <v-list-tile v-for="(item, i) in items" :key="i" :to="item.to" router exact>
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
@@ -23,40 +11,26 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
-    </v-navigation-drawer>
-    <v-toolbar
-      v-scroll="onScroll"
-      :color="isTransparent ? 'transparent' : ''"
-      app
-      flat
-    >
-      <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
+    </v-navigation-drawer>-->
+    <v-toolbar v-scroll="onScroll" :color="isTransparent ? 'transparent' : ''" app flat>
+      <!--<v-toolbar-side-icon @click="drawer = !drawer" />
+      <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
       </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
+      <v-btn icon @click.stop="clipped = !clipped">
         <v-icon>web</v-icon>
       </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
+      <v-btn icon @click.stop="fixed = !fixed">
         <v-icon>remove</v-icon>
-      </v-btn>
+      </v-btn>-->
       <v-toolbar-title v-text="title" />
       <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
+      <a href="#" class="snipcart-checkout snipcart-summary">
+        <v-btn color="info">View cart (<span class="snipcart-total-items">0</span>)</v-btn>
+      </a>
+      <!--<v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>menu</v-icon>
-      </v-btn>
+      </v-btn>-->
     </v-toolbar>
     <!--RAIN CODE START-->
     <!-- eslint-disable-next-line -->
@@ -114,7 +88,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js',
+      title: 'Petrichor Boutique',
       drops: 0,
       backDrops: 0
     }
@@ -123,9 +97,9 @@ export default {
     this.makeItRain()
   },
   methods: {
-    onScroll: function () {
+    /* onScroll: function () {
       this.isTransparent = window.pageYOffset < 200
-    },
+    }, */
     makeItRain: function () {
       let increment = 0
       let drops = ''
@@ -152,6 +126,10 @@ export default {
 </script>
 
 <style>
+a:link {
+  text-decoration: none;
+}
+
 html {
   height: 100%;
 }
@@ -168,6 +146,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 2;
+  pointer-events: none
 }
 
 .rain.back-row {

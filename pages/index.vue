@@ -1,28 +1,22 @@
 <template>
   <div id="mainPage">
     <Welcome />
-    <Spring />
-    <Summer />
-    <Fall />
-    <Winter />
+    <Section season="spring" image-side="right" description="Lorem ipsum dolor sit amet, consectetur adipi scin elit. Etiam vulputate augue vel felis gravida porta. Lorem ipsum dolor sit amet." />
+    <Section season="summer" image-side="left" description="Lorem ipsum dolor sit amet, consectetur adipi scin elit. Etiam vulputate augue vel felis gravida porta. Lorem ipsum dolor sit amet." />
+    <Section season="fall" image-side="right" description="Lorem ipsum dolor sit amet, consectetur adipi scin elit. Etiam vulputate augue vel felis gravida porta. Lorem ipsum dolor sit amet." />
+    <Section season="winter" image-side="left" description="Lorem ipsum dolor sit amet, consectetur adipi scin elit. Etiam vulputate augue vel felis gravida porta. Lorem ipsum dolor sit amet." />
   </div>
 </template>
 
 <script>
 import Welcome from '~/components/Welcome.vue'
-import Spring from '~/components/Spring.vue'
-import Summer from '~/components/Summer.vue'
-import Fall from '~/components/Fall.vue'
-import Winter from '~/components/Winter.vue'
+import Section from '~/components/Section.vue'
 import axios from 'axios'
 
 export default {
   components: {
     Welcome,
-    Spring,
-    Summer,
-    Fall,
-    Winter
+    Section
   },
   data() {
     return {
