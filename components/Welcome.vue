@@ -8,6 +8,7 @@
         <v-layout align-center justify-center>
           <v-flex xs10 md6>
             <v-subheader>Welcome!</v-subheader>
+            <p>This should probably be a banner or two</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur ad
               ipiscin elit. Etiam vulputate augue vel felis gra
@@ -18,9 +19,7 @@
               vida porta. Lorem ipsum dolor sit amet, cons
               ectetur adipiscing elit.
             </p>
-            <p>
-              Products and things can go in these spaces
-            </p>
+            <p>Scroll down to see our featured products by season</p>
           </v-flex>
         </v-layout>
       </v-flex>

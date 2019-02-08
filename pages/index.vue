@@ -18,16 +18,16 @@ export default {
     Welcome,
     Section
   },
-  data() {
-    return {
-      somedata: ''
-    }
-  },
   asyncData({ store, env, params, error }) {
     return axios.get(`${env.cockpit.apiUrl}/collections/get/Product?token=${env.cockpit.apiToken}`)
       .then((res) => {
         return store.commit('setProducts', res.data.entries)
       })
+  },
+  data() {
+    return {
+      somedata: ''
+    }
   },
   methods: {
     getProducts: function () {

@@ -25,6 +25,8 @@
       </v-btn>-->
       <v-toolbar-title v-text="title" />
       <v-spacer />
+      <nuxt-link to="/"><v-btn color="info">Home</v-btn></nuxt-link>
+      <nuxt-link to="/cart"><v-btn color="info">Cart</v-btn></nuxt-link>
       <a href="#" class="snipcart-checkout snipcart-summary">
         <v-btn color="info">View cart (<span class="snipcart-total-items">0</span>)</v-btn>
       </a>
@@ -39,12 +41,7 @@
     <div class="rain back-row" v-html="backDrops" />
     <!--RAIN CODE END-->
     <nuxt />
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
+    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
       <v-list>
         <v-list-tile @click.native="right = !right">
           <v-list-tile-action>
@@ -56,7 +53,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-footer id="footer" height="88px">
+    <v-footer id="footer" height="40px">
       <v-spacer />
       <span>Copyright Petrichor Boutique &copy; 2019</span>
     </v-footer>

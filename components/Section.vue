@@ -28,7 +28,8 @@
                              :data-item-price="product.Price"
                              :data-item-id="product._id"
                              :data-item-url="product.Image.path"
-                             :data-item-description="product.Description">
+                             :data-item-description="product.Description"
+                      >
                         <v-icon>mdi-cart</v-icon>
                       </v-btn>
                       <div class="title font-weight-light green--text mb-1">{{ product.Name }}</div>
@@ -51,9 +52,18 @@
 <script>
 export default {
   props: {
-    season: String,
-    description: String,
-    imageSide: String
+    season: {
+      default: 'none',
+      type: String
+    },
+    description: {
+      default: 'description',
+      type: String
+    },
+    imageSide: {
+      default: 'left',
+      type: String
+    }
   },
   data() {
     return {
